@@ -1,0 +1,15 @@
+{
+  "mode": "pre",
+  "tag": "alpha",
+  "initialVersions": {
+    "@coinstore-ui/alert": "0.0.1-alpha.0",
+    "@coinstore-ui/button": "0.0.1-alpha.0",
+    "@coinstore-ui/icon": "0.0.1-alpha.0",
+    "@coinstore-ui/link": "0.0.1-alpha.0",
+    "@coinstore-ui/tabs": "0.0.1-alpha.0",
+    "@coinstore-ui/transition": "0.0.1-alpha.0"
+  },
+  "changesets": [
+    "proud-terms-hang"
+  ]
+}
