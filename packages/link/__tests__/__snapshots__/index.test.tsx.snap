@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Link component renders correctly 1`] = `
+<a
+  class="link"
+  href="http://baidu.com"
+>
+  go to baidu website
+</a>
+`;

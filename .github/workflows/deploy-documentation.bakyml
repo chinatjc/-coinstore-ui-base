@@ -1,0 +1,40 @@
+name: Deploying docuemntation to GitHub Pages
+
+run-name: ${{ github.actor }} is deploying docuemntation to GitHub Pages 🚀
+
+on:
+  push:
+    branches: [main]
+    paths: |
+      src/**/*.mdx
+      src/**/*.stories.@(js|jsx|mjs|ts|tsx)
+
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    permissions:
+      contents: write
+
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+        with:
+          ref: 'main'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '21'
+
+      - name: Install and Build 🔧
+        run: |
+          npm ci
+          npm run build-storybook
+
+      - name: Deploy for GitHub 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.6.1
+        with:
+          folder: storybook-static
+          single-commit: true

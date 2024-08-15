@@ -1,0 +1,23 @@
+@use './variables' as *;
+@use './mixin' as *;
+
+.link {
+  line-height: $btn-line-height;
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, 0);
+  font-weight: $font-weight-normal;
+  color: $btn-link-color;
+  text-decoration: $link-decoration;
+  &:hover {
+    color: $btn-link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+  }
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    cursor: not-allowed;
+  }
+}

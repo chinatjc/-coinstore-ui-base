@@ -1,0 +1,51 @@
+@use './variables' as *;
+@use './mixin' as *;
+
+.standard-button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+$alert-colors: (
+  'default': $primary,
+  'success': $success,
+  'warning': $warning,
+  'danger': $danger,
+);
+
+.alert {
+  position: relative;
+  padding: $alert-padding-y $alert-padding-x;
+  border: $alert-border-width solid transparent;
+  border-radius: $alert-border-radius;
+  margin: 0 0 $alert-margin-bottom;
+
+  .alert-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: $alert-padding-y $alert-padding-x;
+    color: inherit;
+  }
+
+  .bold-title {
+    font-weight: $font-weight-bold;
+  }
+
+  .alert-desc {
+    font-size: $alert-description-font-size;
+    margin: $alert-description-top-margin 0 0;
+  }
+}
+
+@each $color, $value in $alert-colors {
+  .alert-#{$color} {
+    @include alert-style($value, darken($value, 5%), $white);
+  }
+}

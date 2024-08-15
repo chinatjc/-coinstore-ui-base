@@ -1,0 +1,30 @@
+{
+  "name": "@coinstore-ui/tabs",
+  "version": "0.0.1-alpha.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.scss"
+  ],
+  "dependencies": {
+    "classnames": "^2.5.1"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
+  },
+  "engines": {
+    "node": ">=21.1.0",
+    "npm": ">=10.2.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.7",
+    "@types/react": "^18.3.3",
+    "lodash": "^4.17.21"
+  }
+}

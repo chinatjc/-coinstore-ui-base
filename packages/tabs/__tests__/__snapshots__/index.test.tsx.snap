@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Tabs component renders correctly 1`] = `
+<div
+  class="tabs"
+>
+  <ul
+    class="tabs-nav nav-line"
+    role="tablist"
+  >
+    <li
+      aria-selected="true"
+      class="tabs-nav-item is-active"
+      role="tab"
+    >
+      选项卡一
+    </li>
+    <li
+      aria-selected="false"
+      class="tabs-nav-item"
+      role="tab"
+    >
+      选项卡二
+    </li>
+    <li
+      aria-selected="false"
+      class="tabs-nav-item"
+      role="tab"
+    >
+      选项卡三
+    </li>
+  </ul>
+  <div
+    class="tabs-content"
+  >
+    this is content one
+  </div>
+</div>
+`;

@@ -1,0 +1,28 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": { "node": "current" },
+        "useBuiltIns": "usage",
+        "corejs": "^3.37"
+      }
+    ],
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ],
+    [
+      "@babel/preset-typescript",
+      {
+        "isTSX": true,
+        "allExtensions": true,
+        "disallowAmbiguousJSXLike": true,
+        "optimizeConstEnums": true,
+        "rewriteImportExtensions": true
+      }
+    ]
+  ]
+}
